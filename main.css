@@ -1,0 +1,7 @@
+$theme-color: #0bb6ef;
+
+
+body {
+  font: 100% $theme-color;
+  color: $theme-color;
+}
