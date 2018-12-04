@@ -1,3 +1,7 @@
+---
+title: "Ansible"
+---
+
 # Ansible
 
 ## What is Ansible
