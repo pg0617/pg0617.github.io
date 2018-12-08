@@ -23,7 +23,8 @@ TODO
 #### Install from Tarballs of Tagged Releases
 TODO
 #### Install by running the source code
-TODO
+Clone the code from the github with $ git clone https://github.com/ansible/ansible.git --recursive, then apply $ cd ./ansible
+After get the source code, setting up the environment with Bash/Fish
 
 ## How To Use
 
