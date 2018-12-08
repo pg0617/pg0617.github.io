@@ -77,7 +77,7 @@ Playbooks are written in YAML format. An example playbook looks like the followi
       - name: copy file to group_one
         copy: src=/group_one_file dest=/group_one_dest
 
-This playbook contains two plays, each containing one task. Each play lists the hosts that it will be run against, and the user that the command will be run as on the host. Each play also contains a list of tasks. Each task has a name, which describes what the task does, and then a module name, followed by a list of arguments, in the form <arg_name>=<arg_value>.
+This playbook contains two plays, each containing one task. Each play lists the hosts that it will be run against, and the user that the command will be run as on the host. Each play also contains a list of tasks. Each task has a name, which describes what the task does, and then a module name, followed by a list of arguments, in the form 'arg_name'='arg_value'.
 
 To execute a playbook, use the following syntax:
 
