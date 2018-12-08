@@ -18,11 +18,11 @@ As long as your can run Python2 or Python3 on your machine, you can run Ansible.
 Using sftp to control the nodes (remote machines), if sftp is not applicable, you can use scp.
 
 ### How to install
-Intall from Latest Release
+#### Intall from Latest Release
 TODO
-Install from Tarballs of Tagged Releases
+#### Install from Tarballs of Tagged Releases
 TODO
-Install by running the source code
+#### Install by running the source code
 TODO
 
 ## How To Use
