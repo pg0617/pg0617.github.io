@@ -17,7 +17,7 @@ Ansible can be installed on one machine then the this center machine can control
 As long as your can run Python2 or Python3 on your machine, you can run Ansible. The Ansible can be run on Red Hat, Debian, CentOS, macOS, any of the BSDs but not the Windows. 
 Using sftp to control the nodes (remote machines), if sftp is not applicable, you can use scp.
 
-### How to install
+## How to install
 #### Intall from Latest Release
 ###### Install Ansible from with DNF/Yum
 On On Fedora:
