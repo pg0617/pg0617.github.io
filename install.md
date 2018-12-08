@@ -19,6 +19,7 @@ Using sftp to control the nodes (remote machines), if sftp is not applicable, yo
 
 ## How to install
 #### Intall from Latest Release
+
 ###### Install Ansible from with DNF/Yum
 On On Fedora:
 
@@ -89,7 +90,9 @@ Using
 to decrease the noise of compiler when installing ansible on macOS Mavericks
 
 #### Install from Tarballs of Tagged Releases
-TODO
+
+Download Tarball release from https://releases.ansible.com/ansible/?extIdCarryOver=true&sc_cid=701f2000001OH7YAAW to avoid git checkout.
+
 #### Install by running the source code
 Clone the code from the github with 
 
@@ -109,8 +112,20 @@ or Fish:
 
     $ source ./hacking/env-setup.fish
     
+Ansible can also be installed vis 
 
+    $ sudo pip install -r ./requirements.txt
+
+Using 
+
+    $ git pull --rebase
     
+to update the ansible checkout
+    
+Finally, test the installation via
+
+    $ ansible all -m ping --ask-pass
+
 
 ## How To Use
 #### Inventory Management
