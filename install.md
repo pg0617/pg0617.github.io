@@ -27,8 +27,61 @@ Clone the code from the github with $ git clone https://github.com/ansible/ansib
 After get the source code, setting up the environment with Bash/Fish
 
 ## How To Use
+#### Inventory Management
+Ansible's inventory contains all the systems that Ansible can work against. By default, Ansible's inventory is saved at /etc/ansible/hosts. This file can be in several formats, but INI is supported by default.
 
-TODO
+An INI inventory file looks like the following:
+
+    one.example.com
+    
+    [group_one]
+    two.example.com
+    three.example.com
+    [group_two]
+    three.example.com
+    four.example.com:5080
+    five.example.com
+
+All of the lines with example.com are host names. A host name can be extended with the port number if a non-standard port is being used. The names inside square brackets are group names. Groups can be used to send commands to only a subset of hosts. It is possible to have a host in more than one group, in the above example, 'three.example.com' is in both 'group_one' and 'group_two'.
+    
+#### Ad-hoc Commands
+An ad-hoc command is a command that you type in to run once, without saving it for later. For example, the following command will copy a file to all of the hosts in your inventory file:
+
+    ansible all -m copy -a "src=/srcfile dest=/destloc"
+
+In the above command, 'all' indicates that this command should be run against all servers in the invetory. It is also possible to use just one host or one group of hosts.
+
+    ansible one.example.com -m copy -a "src=/srcfile dest=/destloc"
+    ansible group_one -m copy -a "src=/srcfile dest=/destloc"
+    
+The -m option specifies a module, in this case the copy module. The default module is 'command'. A index of modules can be found at https://docs.ansible.com/ansible/2.5/modules/modules_by_category.html .
+
+The -a option specifies that what follows are the arguments to pass to the module, in this case the source file location and the destination file location.
+
+#### Playbooks
+Ad-hoc commands are useful when you want to do something simple quickly, but don't offer much advantage with more complex tasks that need to be done repeatedly. Instead, Ansible uses playbooks to achieve this. A playbook allows the user to setup multiple 'plays', which assign groups of hosts to tasks. At the simplest level, tasks are simply calls to ansible modules, as in an ad-hoc command.
+
+Playbooks are written in YAML format. An example playbook looks like the following:
+
+    - hosts: all
+      remote_user: root
+    
+      tasks:
+      - name: copy file to all hosts
+        copy: src=/srcfile dest=/destloc
+    
+    - hosts: group_one
+      remote_user: root
+      
+      tasks:
+      - name: copy file to group_one
+        copy: src=/group_one_file dest=/group_one_dest
+
+This playbook contains two plays, each containing one task. Each play lists the hosts that it will be run against, and the user that the command will be run as on the host. Each play also contains a list of tasks. Each task has a name, which describes what the task does, and then a module name, followed by a list of arguments, in the form <arg_name>=<arg_value>.
+
+To execute a playbook, use the following syntax:
+
+    ansible-playbook playbookFileName.yml
 
 ## Where To Go From Here
 
