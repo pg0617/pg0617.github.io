@@ -19,12 +19,98 @@ Using sftp to control the nodes (remote machines), if sftp is not applicable, yo
 
 ### How to install
 #### Intall from Latest Release
-TODO
+###### Install Ansible from with DNF/Yum
+On On Fedora:
+
+    $ sudo dnf install ansible
+    
+On RHEL and CentOS:
+
+    $ sudo yum install ansible
+    
+##### Install Ansible with Apt
+Ubunto:
+
+    $ sudo apt-get update
+    $ sudo apt-get install software-properties-common
+    $ sudo apt-add-repository --yes --update ppa:ansible/ansible
+    $ sudo apt-get install ansible
+    
+Debian：
+First, add
+
+    deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main
+    
+to /etc/apt/sources.list
+
+Then, run the following code:
+    
+    $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
+    $ sudo apt-get update
+    $ sudo apt-get install ansible
+    
+##### Install with Portage
+
+    $ emerge -av app-admin/ansible
+    $ echo 'app-admin/ansible' >> /etc/portage/package.accept_keywords
+
+##### Install with pkg
+   
+    $ sudo pkg install py27-ansible
+
+or
+
+    $ sudo pkg install py36-ansible
+    
+or install from port
+
+    $ sudo make -C /usr/ports/sysutils/ansible install
+
+##### Install with OpenCSW for Sloaris
+
+    # pkgadd -d http://get.opencsw.org/now
+    # /opt/csw/bin/pkgutil -i ansible
+
+##### Install with Pacman for Arch Linux
+
+    $ pacman -S ansible
+    
+##### Install with pip
+A preferred way for MacOS to install Ansible
+
+    $ sudo easy_install pip
+    $ sudo pip install ansible
+    $ pip install git+https://github.com/ansible/ansible.git@devel
+    
+Using     
+
+    $ sudo CFLAGS=-Qunused-arguments CPPFLAGS=-Qunused-arguments pip install ansible
+    
+to decrease the noise of compiler when installing ansible on macOS Mavericks
+
 #### Install from Tarballs of Tagged Releases
 TODO
 #### Install by running the source code
-Clone the code from the github with $ git clone https://github.com/ansible/ansible.git --recursive, then apply $ cd ./ansible
-After get the source code, setting up the environment with Bash/Fish
+Clone the code from the github with 
+
+    $ git clone https://github.com/ansible/ansible.git --recursive, 
+
+then apply 
+
+    $ cd ./ansible
+    
+After get the source code, setting up the environment with 
+
+Bash:
+
+    $ source ./hacking/env-setup
+    
+or Fish:
+
+    $ source ./hacking/env-setup.fish
+    
+
+    
 
 ## How To Use
 #### Inventory Management
