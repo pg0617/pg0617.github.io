@@ -93,5 +93,5 @@ Conditionals are used where one needs to run a specific step based on a conditio
 In this case, Equals will be printed as the test1 variable is equal as mentioned in the when condition. 
 'when' can be used with a logical OR and logical AND condition as in other the programming languages.
 
-  
-
+## Back to view how to use Ansible
+#### [click here](https://pg0617.github.io/install)
