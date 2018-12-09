@@ -186,4 +186,21 @@ To execute a playbook, use the following syntax:
 
 ## Where To Go From Here
 
-TODO
+#### Try Ansible with your first command
+1. Editing /etc/ansible/hosts to put your remote systems on it and find your authorized_keys.
+
+2. Setting up SSH agent to avoid retyping passwords with 
+
+    $ ssh-agent bash
+    $ ssh-add ~/.ssh/id_rsa
+    
+3. Ping all your nodes 
+    
+    $ ansible all -m ping
+
+4. Now, you are ready to try to run the following command on all your nodes
+
+    $ ansible all -a "/bin/echo hello"
+
+
+
