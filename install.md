@@ -1,6 +1,5 @@
 ---
-title: Ansible
-SEOTitle: Ansible Tutorial
+title: Ansible Tutorial
 ---
 
 # Ansible
