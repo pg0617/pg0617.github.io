@@ -1,5 +1,6 @@
 ---
 title: Ansible Tutorial
+author: Xilin Cheng, Cody Craig, Kaushik and Paul
 ---
 
 # Ansible
