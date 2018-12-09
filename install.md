@@ -202,6 +202,6 @@ Now, you are ready to try to run the following command on all your nodes
 
     $ ansible all -a "/bin/echo hello"
 
-
-# [Click here to view the tutorial about variables, loops and conditionals of Ansible](https://pg0617.github.io/variables)
+## For the tutorial about variables, loops and conditionals of Ansible? 
+### [Click here](https://pg0617.github.io/variables)
 
