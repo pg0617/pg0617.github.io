@@ -21,7 +21,7 @@ Using sftp to control the nodes (remote machines), if sftp is not applicable, yo
 #### Intall from Latest Release
 
 ###### Install Ansible with DNF/Yum
-On On Fedora:
+On Fedora:
 
     $ sudo dnf install ansible
     
@@ -30,14 +30,14 @@ On RHEL and CentOS:
     $ sudo yum install ansible
     
 ##### Install Ansible with Apt
-Ubunto:
+On Ubunto:
 
     $ sudo apt-get update
     $ sudo apt-get install software-properties-common
     $ sudo apt-add-repository --yes --update ppa:ansible/ansible
     $ sudo apt-get install ansible
     
-Debian：
+On Debian：
 First, add
 
     deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main
