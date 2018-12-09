@@ -20,7 +20,7 @@ Using sftp to control the nodes (remote machines), if sftp is not applicable, yo
 ## How to install
 #### Intall from Latest Release
 
-###### Install Ansible from with DNF/Yum
+###### Install Ansible with DNF/Yum
 On On Fedora:
 
     $ sudo dnf install ansible
