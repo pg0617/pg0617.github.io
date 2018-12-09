@@ -1,6 +1,6 @@
 ---
-title: "Ansible"
-SEOTitle: "Ansible Tutorial"
+title: Ansible
+SEOTitle: Ansible Tutorial
 ---
 
 # Ansible
