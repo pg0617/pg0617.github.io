@@ -1,5 +1,6 @@
 ---
 title: "Ansible"
+SEOTitle: "Ansible Tutorial"
 ---
 
 # Ansible
